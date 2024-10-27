@@ -1,0 +1,14 @@
+
+h1{
+    border-top-style: dotted;
+
+}
+
+
+p{
+    border-style: outset;
+    border-width: 5px;
+    border-color: brown;
+    border-radius: 10px;
+    padding: 5px;
+}

@@ -1,0 +1,22 @@
+body {
+
+    background-color: black;
+}
+
+h1 {
+    color: white; 
+    text-shadow: 4px 4px;
+    font-size: 50px; 
+
+}
+
+p{
+    font-size:x-large;
+    background-color:burlywood;
+    color:red;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    font-style: italic;
+    font-weight: bolder;
+    text-decoration:dotted underline cyan;
+    font-size: 20px; 
+}

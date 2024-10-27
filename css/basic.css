@@ -1,0 +1,31 @@
+body {
+
+    background-color: black;
+}
+
+h1 {
+    color: white;
+}
+
+p{
+    font-size:x-large;
+    background-color:burlywood;
+    color:red;
+}
+
+#p1{
+    font-size:x-large;
+    background-color:burlywood;
+    color:red;
+}
+
+.odd{
+    font-size:x-large;
+    background-color:burlywood;
+    color:blue;
+}
+.even{
+    font-size:x-large;
+    background-color:burlywood;
+    color:rebeccapurple;
+}
