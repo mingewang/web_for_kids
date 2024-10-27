@@ -1,0 +1,94 @@
+#box1{
+
+    border: 4px solid;
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    font-size: 30px;
+    background-color: blue;
+
+    animation: mySlide;
+    animation-duration: 10s;
+    animation-iteration-count: 4;
+    animation-timing-function: ease-in;
+}
+
+@keyframes mySlide {
+    from{ margin-left: 100%;}
+    to{ margin-left: 0%;}
+    
+}
+
+#box2{
+    border: 4px solid;
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    font-size: 30px;
+    background-color: green;
+    animation: myRotate;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes myRotate {
+    50%{transform: rotateZ(360deg)};
+    
+}
+
+#box3{
+    border: 4px solid;
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    font-size: 30px;
+    background-color: red;
+
+    animation: myop;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes myop {
+    50%{opacity: 0; };
+    
+}
+
+#box4{
+    border: 4px solid;
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    font-size: 30px;
+    background-color: yellow;
+
+    animation: myscale;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes myscale {
+    50%{ transform: scale(0.5,0.5) };
+    
+}
+
+#box5{
+    border: 4px solid;
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    font-size: 30px;
+    background-color: yellow;
+
+    animation: mycolor;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes mycolor {
+    0%{ background-color: red };
+    30%{ background-color: blueviolet };
+    60%{ background-color: blue };
+    90%{ background-color: green };
+    
+}
