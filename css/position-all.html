@@ -1,0 +1,59 @@
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            position: relative;
+            height: 200px;
+            border: 1px solid #000;
+        }
+
+        .static {
+            position: static;
+            background: lightblue;
+        }
+
+        .relative {
+            position: relative;
+            top: 20px; /* Moves down */
+            background: lightgreen;
+        }
+
+        .absolute {
+            position: absolute;
+            top: 40px; /* Moves from the top of the container */
+            left: 10px; /* Moves from the left of the container */
+            background: lightcoral;
+        }
+
+        .fixed {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: lightpink;
+        }
+
+        .sticky {
+            position: sticky;
+            top: 0; /* Will stick to the top of the viewport */
+            background: lightyellow;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="static">Static Element</div>
+    <div class="relative">Relative Element</div>
+    <div class="absolute">Absolute Element</div>
+</div>
+<div class="fixed">Fixed Element</div>
+<div style="height: 1000px;">Scroll Down</div>
+<div class="sticky">Sticky Element</div>
+
+</body>
+</html>
+
+
