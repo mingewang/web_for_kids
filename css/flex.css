@@ -1,0 +1,39 @@
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*height: 100vh;*/
+    flex-wrap: wrap;
+}
+
+.item{
+    height: 120px;
+    width: 120px;
+    border: 2px solid;
+    font-size: 50px;
+}
+
+.flex2 {
+    display: flex;
+    /*height: 100vh;*/
+    flex-wrap: wrap;
+}
+
+.item2{
+    height: 120px;
+    width: 120px;
+    text-align: center;
+    background-color: brown;
+    align-self: center;
+    border: 2px solid;
+    font-size: 50px;
+     
+}
+
+.flex3 {
+    display: flex;
+}
+
+.sidebar {
+    flex: 1;
+}
