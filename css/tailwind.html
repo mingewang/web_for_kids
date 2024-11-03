@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS Example</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- Your content goes here -->
+    <nav class="bg-gray-800 p-4">
+    <div class="container mx-auto flex justify-between">
+        <a href="#" class="text-white text-lg font-bold">MySite</a>
+        <ul class="flex space-x-4">
+        <li><a href="#" class="text-gray-300 hover:text-white">Home</a></li>
+        <li><a href="#" class="text-gray-300 hover:text-white">About</a></li>
+        <li><a href="#" class="text-gray-300 hover:text-white">Contact</a></li>
+        </ul>
+    </div>
+    </nav>
+
+
+    <div class="flex flex-col md:flex-row bg-gray-100 p-6">
+        <div class="flex-1 bg-white p-4 m-2">
+          <h2 class="text-lg font-bold text-gray-700">Section 1</h2>
+          <p class="text-gray-600">This is the first section in the layout.</p>
+        </div>
+        <div class="flex-1 bg-white p-4 m-2">
+          <h2 class="text-lg font-bold text-gray-700">Section 2</h2>
+          <p class="text-gray-600">This is the second section in the layout.</p>
+        </div>
+      </div>
+
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        Click Me
+       </button>
+
+
+       <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+        <img class="w-full" src="https://via.placeholder.com/400" alt="Example image">
+        <div class="px-6 py-4">
+          <h2 class="font-bold text-xl mb-2">Tailwind Card</h2>
+          <p class="text-gray-700 text-base">
+            Tailwind is a utility-first CSS framework for rapidly building custom designs.
+          </p>
+        </div>
+        <div class="px-6 pt-4 pb-2">
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tailwind</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#css</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#framework</span>
+        </div>
+      </div>
+
+
+      <div class="h-screen flex items-center justify-center bg-gray-200">
+        <div class="text-center">
+          <h1 class="text-4xl font-bold text-gray-800">Centered Content</h1>
+          <p class="text-gray-600">This content is perfectly centered.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-3 gap-4 p-6">
+        <div class="bg-blue-500 text-white p-4">1</div>
+        <div class="bg-blue-500 text-white p-4">2</div>
+        <div class="bg-blue-500 text-white p-4">3</div>
+        <div class="bg-blue-500 text-white p-4">4</div>
+        <div class="bg-blue-500 text-white p-4">5</div>
+        <div class="bg-blue-500 text-white p-4">6</div>
+      </div>
+
+
+
+
+
+</body>
+</html>

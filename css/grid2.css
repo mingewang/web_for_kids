@@ -1,0 +1,34 @@
+.page-layout {
+    border: solid;
+    display: grid;
+    grid-template-areas: 
+      "header header"
+      "sidebar content"
+      "footer footer";
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto 1fr auto;
+   /* 
+    grid-template-rows: 50px 1fr 50px;
+    */
+    padding: 5px;
+    gap: 5px;
+    height: 95vh; /* Full-page height */
+  }
+  
+  .header { grid-area: header;
+   border: solid;
+   }
+  .sidebar { grid-area: sidebar; border: solid; }
+  .content { grid-area: content; border: solid; }
+  .footer { grid-area: footer; border: solid }
+
+  @media (max-width: 768px) {
+    .page-layout {
+      grid-template-areas: 
+        "header"
+        "content"
+        "sidebar"
+        "footer";
+      grid-template-columns: 1fr;
+    }
+  }
