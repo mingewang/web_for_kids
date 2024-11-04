@@ -1,0 +1,93 @@
+.ball {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 5s ease-out infinite;
+  }
+  
+  @keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(300px); }
+    100% { transform: translateY(0); }
+  }
+
+  /* Part 2: Color Change on Hover */
+.color-change {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  margin-top: 100px;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.color-change:hover {
+  background-color: orange;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid lightgray;
+  border-top: 5px solid purple;
+  border-radius: 50%;
+  margin-top: 50px;
+  animation: spin 1s linear infinite;
+  
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Part 4: Text Fade-In Animation */
+.fade-in-text {
+  font-size: 24px;
+  opacity: 0;
+  animation: fadeIn 3s ease forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Extra Credit: Interactive Button */
+.animated-button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: teal;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  animation: pulse 1s ease infinite alternate;
+}
+
+.animated-button:hover {
+  background-color: darkcyan;
+}
+
+@keyframes pulse {
+  to { transform: scale(1.1); }
+}
+
+
+/* Extra Credit: Moving Background */
+.moving-background {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(90deg, pink, lightblue);
+  background-size: 200% 100%;
+  animation: backgroundMove 5s linear infinite;
+}
+
+@keyframes backgroundMove {
+  from { background-position: 0% 0%; }
+  to { background-position: 100% 0%; }
+}
