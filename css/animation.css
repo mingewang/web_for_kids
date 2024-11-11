@@ -8,15 +8,34 @@
     background-color: blue;
 
     animation: mySlide;
-    animation-duration: 10s;
-    animation-iteration-count: 4;
-    animation-timing-function: ease-in;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
 }
 
 @keyframes mySlide {
-    from{ margin-left: 100%;}
+/*    from{ margin-left: 100%;}
     to{ margin-left: 0%;}
-    
+    */
+    /* Starting position on the left 
+    Moves to the right 
+    Returns to the starting position */
+    /*
+    0% { transform: translateX(0); }       
+    50% { transform: translateX(100vw); }  
+    100% { transform: translateX(0); }     
+    */
+    /* bounce around from left to right */
+    /*
+    0% { margin-left: 0%; }       
+    50% { margin-left: 100% }  
+    100% { margin-left: 0%}     
+    */
+
+    /* bounce around from right to left*/
+    0% { margin-left: 100%; }       
+    50% { margin-left: 0% }  
+    100% { margin-left: 100%}     
 }
 
 #box2{
@@ -31,8 +50,27 @@
     animation-iteration-count: infinite;
 }
 
+/*
+The animation specifies a single keyframe at 50%, 
+meaning halfway through the animation’s duration.
+transform: rotateZ(360deg); 
+applies a 360-degree rotation around the Z-axis, which is perpendicular to the screen. 
+This causes the element to make a full rotation.
+Behavior of myRotate
+Since the animation has only one keyframe defined at 50%, here’s what will happen:
+
+At 0% (the starting point of the animation), 
+the element will start with its default orientation (0 degrees of rotation).
+By the time the animation reaches 50%, the element will have rotated to 360 degrees.
+From 50% to 100%, the animation will return the element back to its starting orientation.
+This gives the effect of rotating clockwise to a full circle at 50% of the duration, 
+then unwinding back to the start by the end of the animation.
+*/
 @keyframes myRotate {
     50%{transform: rotateZ(360deg)};
+    /* 
+    50%{transform: rotateZ(180deg)};
+    */
     
 }
 

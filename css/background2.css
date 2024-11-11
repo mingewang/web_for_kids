@@ -1,3 +1,29 @@
+/*
+
+background-repeat: no-repeat;
+By default, background images repeat to fill the entire background area. 
+Setting no-repeat prevents the image from repeating, displaying it only once.
+
+
+background-attachment: fixed;
+This property controls how the background image behaves when you scroll the page.
+Setting it to fixed keeps the image fixed in place, 
+so it doesn’t move as you scroll, creating a "parallax" effect.
+Without fixed, the image would move along with the page as you scroll.
+
+background-position: center;
+This positions the background image at the center of the screen, 
+both horizontally and vertically.
+Without this, the default position is the top-left corner of the screen.
+
+background-size: cover;
+The cover value scales the image so that it fully covers the background area.
+The image will be resized to cover the entire viewport,
+maintaining its aspect ratio. If the viewport's aspect ratio differs from the image's, 
+some parts of the image might be cropped to ensure there are no empty spaces.
+*/
+
+
 body{
     background-image: url("demo.jpg");
     background-repeat: no-repeat;

@@ -1,3 +1,27 @@
+/*
+transform: rotateX(80deg);
+Function: Rotates an element 
+          around the X-axis by 80 degrees.
+Usage: rotateX() is used for 3D rotation, 
+    tilting an element forward or backward.
+Effect: When used, rotateX() will tilt the element 
+      to give a perspective view. 
+      It works best when the element has a perspective property 
+      applied to its container or is in a 3D context 
+      (like with perspective or transform-style: preserve-3d).
+
+
+transform: skewX(45deg);
+Effect: Skews (tilts) the element along the X-axis (horizontal axis) by 45 degrees.
+Explanation: The sides of the element are angled horizontally. 
+The left and right edges move in opposite directions, making the element look 
+as if it’s been slanted horizontally.
+Visual Result: The top and bottom edges stay horizontal, 
+but the sides are no longer vertical, creating a parallelogram-like shape.
+
+
+*/
+
 #box1{
 
     border: 4px solid;
@@ -9,10 +33,11 @@
     transform: translateX(150px);
     transform: rotateX(180deg);
     transform: rotateY(180deg);
+    /* a bug? scale will revert previous rorateX/Y */
     transform: scaleX(2);
+    /* a bug? skewX and skewY can not be combined ? */
     transform: skewX(45deg);
     transform: skewY(45deg);
-
     /*
         scaleX()
         skewY()
@@ -21,6 +46,18 @@
         translateX()
         translateY()
 
-    */
     transform: matrix(1,10deg,120deg,1,0,0);
+    */
 }
+
+
+.container {
+    perspective: 500px; /* Adds 3D perspective */
+  }
+  
+  .box {
+    transform: rotateX(80deg);
+    width: 100px;
+    height: 100px;
+    background-color: lightcoral;
+  }
