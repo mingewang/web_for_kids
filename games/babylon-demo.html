@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Babylon.js Tutorial</title>
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+  </head>
+  <body>
+    <canvas id="renderCanvas" width="800" height="600"></canvas>
+    <script>
+      const canvas = document.getElementById("renderCanvas");
+      const engine = new BABYLON.Engine(canvas, true);
+      const scene = new BABYLON.Scene(engine);
+
+      // Camera setup
+      const camera = new BABYLON.ArcRotateCamera(
+        "camera1", Math.PI / 2, Math.PI / 2, 10, BABYLON.Vector3.Zero(), scene
+      );
+      camera.attachControl(canvas, true);
+
+      // Light setup
+      const light = new BABYLON.HemisphericLight("light1", BABYLON.Vector3.Up(), scene);
+
+      // Cube setup
+      const box = BABYLON.MeshBuilder.CreateBox("box", { size: 2 }, scene);
+
+      // Ground setup
+      const ground = BABYLON.MeshBuilder.CreateGround("ground", { width: 10, height: 10 }, scene);
+      ground.material = new BABYLON.StandardMaterial("groundMaterial", scene);
+      ground.material.diffuseColor = new BABYLON.Color3(0.5, 0.5, 0.5);
+
+      // Background color
+      scene.clearColor = new BABYLON.Color3(0.5, 0.7, 1);
+
+      // Animation for cube rotation
+      scene.registerBeforeRender(() => {
+        box.rotation.y += 0.01;
+      });
+
+      // Mouse click interaction to change cube color
+      canvas.addEventListener("click", () => {
+        const randomColor = new BABYLON.Color3(Math.random(), Math.random(), Math.random());
+        box.material = new BABYLON.StandardMaterial("material1", scene);
+        box.material.diffuseColor = randomColor;
+      });
+
+      // Render loop
+      engine.runRenderLoop(() => {
+        scene.render();
+      });
+
+      // Resize handling
+      window.addEventListener("resize", () => {
+        engine.resize();
+      });
+    </script>
+  </body>
+</html>

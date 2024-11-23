@@ -1,5 +1,5 @@
 
-
+// demo of variable, functions
 let score = 99.5;               // Number
 let greeting = "Hello, World!"; // String
 let isLoggedIn = true;          // Boolean
