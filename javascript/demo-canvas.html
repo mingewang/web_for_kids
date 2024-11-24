@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+
+<canvas id="myCanvas" width="400" height="400" style="border:1px solid black;"></canvas>
+
+<script>
+const canvas = document.getElementById('myCanvas');
+const ctx = canvas.getContext('2d');
+
+let x = 50, y = 50;
+
+function drawScene() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Draw a rectangle
+    ctx.fillStyle = 'blue';
+    ctx.fillRect(x, y, 100, 50);
+
+    // draw a triangle
+    ctx.beginPath();
+    ctx.moveTo(50, 200); // Starting point
+    ctx.lineTo(150, 300); // Line to this point
+    ctx.lineTo(50, 300); // Line to this point
+    ctx.closePath(); // Connects back to the start
+    ctx.stroke(); // Outlines the shape
+    //ctx.fill(); // Outlines the shape
+
+
+    // Draw a circle
+    ctx.beginPath();
+    ctx.arc(200, 200, 40, 0, Math.PI * 2);
+    ctx.fillStyle = 'green';
+    ctx.fill();
+
+    // Draw text
+    ctx.font = '20px Arial';
+    ctx.fillStyle = 'black';
+    ctx.fillText('Canvas Demo', 10, 30);
+
+    x += 2;
+    if (x > canvas.width) x = -100;
+
+    requestAnimationFrame(drawScene);
+}
+
+drawScene();
+</script>
+
+
+
+</body>
+</html>
