@@ -40,6 +40,10 @@ function fib(n) {
 
 console.log("fib 5 is:", fib(5));
 
+// f(n) = n * (n-1) * (n-2) ... 1  ( n >=1 )
+//
+// f(n) = n * f(n-1)       
+// f(1) =1 
 function factorial(n) {
 
     if ( n == 0) {

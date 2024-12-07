@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event capture and bubble demo</title>
+</head>
+<body>
+    <div id="parent">
+        <div id="child">
+            <button id="button">Click Me</button>
+        </div>
+    </div>
+
+    <script>
+        const parent = document.getElementById("parent");
+        const child = document.getElementById("child");
+        const button = document.getElementById("button");
+        
+        // Event listener for capturing phase (set to true)
+        parent.addEventListener("click", () => {
+            console.log("Parent - Capturing");
+        }, true);
+        
+        child.addEventListener("click", (event) => {
+            console.log("Child - Capturing");
+            //event.stopPropagation(); // stop here
+        }, true);
+        
+        button.addEventListener("click", () => {
+            console.log("Button - Capturing");
+        }, true);
+        
+        // Event listener for bubbling phase (default, set to false)
+        button.addEventListener("click", () => {
+            console.log("Button - Bubbling");
+        });
+
+        child.addEventListener("click", (event) => {
+            console.log("Child - Bubbling");
+            //event.stopPropagation(); // stop here
+        });
+        
+
+        parent.addEventListener("click", () => {
+            console.log("Parent - Bubbling");
+        });
+        
+
+    
+    </script>
+
+
+</body>
+</html>
