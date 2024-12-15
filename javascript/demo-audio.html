@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio button and javascript </title>
+</head>
+<body>
+
+<!-- https://opengameart.org/content/crystal-cave-song18 -->
+<audio id="audioPlayer" src="song18.mp3" controls></audio>
+<button onclick="playAudio()">Play</button>
+<button onclick="pauseAudio()">Pause</button>
+
+
+<script>
+    const audioPlayer = document.getElementById('audioPlayer');
+
+    function playAudio() {
+        audioPlayer.play(); // Plays the audio
+    }
+
+    function pauseAudio() {
+        audioPlayer.pause(); // Pauses the audio
+    }
+</script>
+    
+</body>
+</html>
+
+
