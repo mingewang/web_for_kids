@@ -7,15 +7,14 @@
 </head>
 <body>
    
-
 <canvas id="myCanvas" width="400" height="400" style="border:1px solid black;"></canvas>
+<canvas id="myCanvas2" width="400" height="400" style="border:1px solid black;"></canvas>
 
 <script>
 const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
 
 let x = 50, y = 50;
-
 function drawScene() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -31,7 +30,6 @@ function drawScene() {
     ctx.closePath(); // Connects back to the start
     ctx.stroke(); // Outlines the shape
     //ctx.fill(); // Outlines the shape
-
 
     // Draw a circle
     ctx.beginPath();
@@ -51,9 +49,24 @@ function drawScene() {
 }
 
 drawScene();
+
+// for canvas2
+const canvas2 = document.getElementById('myCanvas2');
+const ctx2 = canvas2.getContext('2d');
+const img = new Image();
+img.src = '../css/demo.jpg';
+img.onload = () => {
+    ctx2.drawImage(img, 100, 100, 250, 250);
+};
+canvas2.addEventListener('click', (event) => {
+    //alert("event here");
+    const rect = canvas2.getBoundingClientRect();
+    const x = event.clientX - rect.left; // X position relative to canvas
+    const y = event.clientY - rect.top;  // Y position relative to canvas
+    ctx2.fillRect(x, y, 10, 10); // Draw a small square at the click position
+});
+
 </script>
-
-
 
 </body>
 </html>
