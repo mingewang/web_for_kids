@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Video Controls</title>
+</head>
+<body>
+  <h1>Advanced Video Controls Example</h1>
+
+  <video id="myVideo" width="640" height="360" controls>
+    <source src="austin_30fps.mp4" type="video/mp4">
+  </video>
+
+  <br>
+  <button id="playButton">Play Video</button>
+  <button id="pauseButton">Pause Video</button>
+  <button id="muteButton">Mute Video</button>
+  <button id="unmuteButton">Unmute Video</button>
+  <br>
+  <label for="volumeControl">Volume:</label>
+  <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1">
+  
+  <br>
+  <label for="seekControl">Seek:</label>
+  <input type="range" id="seekControl" min="0" value="0" step="1">
+
+  <script>
+    // Get the video element and controls
+    const video = document.getElementById('myVideo');
+    const playButton = document.getElementById('playButton');
+    const pauseButton = document.getElementById('pauseButton');
+    const muteButton = document.getElementById('muteButton');
+    const unmuteButton = document.getElementById('unmuteButton');
+    const volumeControl = document.getElementById('volumeControl');
+    const seekControl = document.getElementById('seekControl');
+
+    // Play the video when the play button is clicked
+    playButton.addEventListener('click', () => {
+      video.play();
+    });
+
+    // Pause the video when the pause button is clicked
+    pauseButton.addEventListener('click', () => {
+      video.pause();
+    });
+
+    // Mute the video when the mute button is clicked
+    muteButton.addEventListener('click', () => {
+      video.muted = true;
+    });
+
+    // Unmute the video when the unmute button is clicked
+    unmuteButton.addEventListener('click', () => {
+      video.muted = false;
+    });
+
+    // Control the volume using the range input
+    volumeControl.addEventListener('input', () => {
+      video.volume = volumeControl.value;
+    });
+
+    // Update the seek bar to reflect the current time of the video
+    video.addEventListener('timeupdate', () => {
+      seekControl.value = video.currentTime;
+    });
+
+    // Seek to a specific time in the video
+    seekControl.addEventListener('input', () => {
+      video.currentTime = seekControl.value;
+    });
+  </script>
+</body>
+</html>
