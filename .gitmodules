@@ -1,6 +1,6 @@
 [submodule "games/third-party/Breakout_Game"]
-    path = games/third-party/Breakout_Game
-    url = https://github.com/sarthakagarwal18/Breakout_Game.git
+	path = games/third-party/Breakout_Game
+	url = https://github.com/sarthakagarwal18/Breakout_Game.git
 
 [submodule "games/third-party/Car-Racer-Vanilla-JS"]
     path = games/third-party/Car-Racer-Vanilla-JS
