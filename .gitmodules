@@ -1,0 +1,35 @@
+[submodule "games/third-party/Breakout_Game"]
+    path = games/third-party/Breakout_Game
+    url = https://github.com/sarthakagarwal18/Breakout_Game.git
+
+[submodule "games/third-party/Car-Racer-Vanilla-JS"]
+    path = games/third-party/Car-Racer-Vanilla-JS
+    url = https://github.com/shivamjain1/Car-Racer-Vanilla-JS.git
+
+[submodule "games/third-party/Javascript-Snake-Game"]
+    path = games/third-party/Javascript-Snake-Game
+    url = https://github.com/WebDevSimplified/Javascript-Snake-Game 
+
+[submodule "games/third-party/LOOT-RPG-v1.0"]
+    path = games/third-party/LOOT-RPG-v1.0
+    url = https://github.com/RobertSkalko/LOOT-RPG-v1.0.git
+
+[submodule "games/third-party/memory-game"]
+    path = games/third-party/memory-game
+    url = https://github.com/flowforfrank/memory-game
+
+[submodule "games/third-party/minesweeper"]
+    path = games/third-party/minesweeper
+    url = https://github.com/kubowania/minesweeper.git
+
+[submodule "games/third-party/rock-paper-scissors-x3"]
+    path = games/third-party/rock-paper-scissors-x3
+    url = https://github.com/kubowania/rock-paper-scissors-x3 
+
+[submodule "games/third-party/slide-puzzle"]
+    path = games/third-party/slide-puzzle
+    url = https://github.com/ImKennyYip/slide-puzzle.git
+
+[submodule "games/third-party/tic-tac-toe"]
+    path = games/third-party/tic-tac-toe
+    url = https://github.com/arasgungore/tic-tac-toe 
